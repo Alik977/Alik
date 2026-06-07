@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background{
+    background-color: rgb(7, 7, 16);
+   height: 100vh;
+   color: white;
+}
+
+.infoall{
+    padding: 40px 100px;
+ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info1{
+       width: 700px;
+}
+.Hello{
+    color: blueviolet;
+}
+.Alik{
+    padding: 15px 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+}
+.front{
+    color: blueviolet;
+}
+.aboutme{
+    padding: 20px 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.imagealik{
+    width: 500px;
+    height: 500px;
+}
+.link1{
+    width: 50px;
+height: 50px;
+background-color: white;
+border-radius: 35px;
+}
+.git1{
+    width: 50px;
+height: 50px;
+background-color: white;
+border-radius: 35px;
+}
+.findme{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+font-size: 25px;
+}
+.mail{
+     width: 50px;
+height: 50px;
+background-color:white;
+border-radius: 35px;
+}
+.button{
+    display: flex;
+    gap: 40px;
+    padding: 20px 0px;
+}
+
+.View{
+    
+}

@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+li a:hover{color: blueviolet;
+   transition: all 2s;
+border-bottom: 5px solid blueviolet; 
+
+}
+    
+
+.navbar {
+     background-color: rgb(7, 7, 16);
+ 
+   
+ display: flex;
+ justify-content: space-around;
+
+
+
+}
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.logoedit{
+width: 100px;
+height: 100px;
+
+}
+.nav ul{
+    display: flex;
+    gap: 50px;
+    vertical-align: middle;
+    padding: 20px 200px;
+}
+.link{
+    width: 50px;
+height: 50px;
+background-color: white;
+border-radius: 35px;
+}
+.git{
+    width: 50px;
+height: 50px;
+background-color: antiquewhite;
+border-radius: 35px;
+}
+
+.linkbio{
+    display: flex;
+    gap: 20px;
+}
