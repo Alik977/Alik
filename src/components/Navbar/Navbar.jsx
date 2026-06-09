@@ -40,11 +40,12 @@ function Navbar() {
             href="https://www.linkedin.com/in/alik-hakobyan-7949533a1/"
             target="blank"
           >
-  
             <img src={linkdin} alt="" className="link" />
           </a>
         </div>
+          
       </div>
+    
     </div>
   );
 }

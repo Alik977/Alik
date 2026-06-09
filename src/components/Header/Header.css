@@ -1,74 +1,173 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.background{
-    background-color: rgb(7, 7, 16);
-   height: 100vh;
-   color: white;
-}
-
-.infoall{
-    padding: 40px 100px;
- 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.info1{
-       width: 700px;
-}
-.Hello{
-    color: blueviolet;
-}
-.Alik{
-    padding: 15px 0px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
-}
-.front{
-    color: blueviolet;
-}
-.aboutme{
-    padding: 20px 0px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.imagealik{
-    width: 500px;
-    height: 500px;
-}
-.link1{
-    width: 50px;
-height: 50px;
-background-color: white;
-border-radius: 35px;
-}
-.git1{
-    width: 50px;
-height: 50px;
-background-color: white;
-border-radius: 35px;
-}
-.findme{
-    padding: 20px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-font-size: 25px;
-}
-.mail{
-     width: 50px;
-height: 50px;
-background-color:white;
-border-radius: 35px;
-}
-.button{
-    display: flex;
-    gap: 40px;
-    padding: 20px 0px;
+.background {
+  background-color: rgb(7, 7, 16);
+  height: 150vh;
+  color: white;
 }
 
-.View{
-    
+.infoall {
+  padding: 40px 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+.info1 {
+  width: 700px;
+}
+.Hello {
+  color: blueviolet;
+}
+.Alik {
+  padding: 15px 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+}
+.front {
+  color: blueviolet;
+}
+.aboutme {
+  padding: 20px 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.imagealik {
+  width: 500px;
+  height: 500px;
+}
+.link1 {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 35px;
+}
+.git1 {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 35px;
+}
+.findme {
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+}
+.findme {
+  color: gray;
+}
+.mail {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 35px;
+}
+.button {
+  display: flex;
+  gap: 40px;
+  padding: 20px 0px;
+}
+
+.View {
+  background-color: transparent;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 25px;
+  border: 1px solid;
+  font-size: 15px;
+}
+.Contact {
+  background-color: transparent;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 25px;
+  border: 1px solid;
+  font-size: 15px;
+}
+.View:hover {
+  background-color: blueviolet;
+  cursor: pointer;
+}
+.Contact:hover {
+  background-color: blueviolet;
+  cursor: pointer;
+}
+.miniabout {
+  border-radius: 35px;
+  background-color: #0f1016;
+  width: 1380px;
+  padding: 20px 0px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+}
+.aboutmini {
+  width: 300px;
+  height: 350px;
+  padding: 30px 0px 10px 30px;
+  border-radius: 55px;
+}
+.aboutminih2 {
+  color: blueviolet;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 20px 0px;
+}
+.paragrapfmini {
+  padding: 20px 0px;
+  width: 500px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: gray;
+}
+.calendar {
+  width: 30px;
+  height: 30px;
+}
+.calendar1 p {
+  color: blueviolet;
+  padding: 15px 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.location {
+  width: 30px;
+  height: 30px;
+}
+.location1 p {
+  color: blueviolet;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 15px 0px;
+}
+.mailmini {
+  width: 30px;
+  height: 30px;
+}
+.mail1 p {
+  color: blueviolet;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 15px 0px;
+}
+.miniabout2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+}
+.downloadCV {
+  background-color: transparent;
+  color: blueviolet;
+  padding: 20px 40px;
+  border-radius: 25px;
+  border: 1px solid ;
+  font-size: 15px;
+}
+
+
+ .downloadCV a{
+    color: blueviolet;
+ }
+ .downloadCV:hover{
+    transition: all 1s;
+    transform:  scale(1.1);
+ }
