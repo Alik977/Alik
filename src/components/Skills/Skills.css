@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.skils{
+     background-color: rgb(7, 7, 16);
+     height: 100vh;
+     color: blueviolet;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.allskils{
+      border-radius: 35px;
+  background-color: #0f1016;
+  width: 1380px;
+  height: 
+  300px;
+  padding: 20px 40px;
+  margin: auto;
+ 
+ 
+  gap: 20px;
+ border: 1px solid blueviolet;
+  
+}
+.skill img{
+  width: 100px;
+height: 100px;
+}
+.skill{
+  width: 300px;
+  height: 120px;
+  border-radius: 35px;
+  background-color: #0f1016;
+  border: 1px solid blueviolet ;
+  margin: auto;
+  
+}
+.skill:hover{
+  scale: 1.1;
+  transition: all 1s;
+  cursor: pointer;
+}
+.skill p{
+  color:blueviolet;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  margin: auto;
+}
+.skilldown{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0px;
+  gap: 25px;
+}

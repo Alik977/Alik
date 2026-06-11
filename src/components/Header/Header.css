@@ -35,8 +35,8 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .imagealik {
-  width: 500px;
-  height: 500px;
+  width: 800px;
+  height: 800px;
 }
 .link1 {
   width: 50px;
@@ -100,16 +100,18 @@
   border-radius: 35px;
   background-color: #0f1016;
   width: 1380px;
-  padding: 20px 0px;
+  padding: 10px 0px;
   margin: auto;
   display: flex;
   gap: 50px;
+  border: 1px solid blueviolet;
 }
 .aboutmini {
   width: 300px;
   height: 350px;
   padding: 30px 0px 10px 30px;
   border-radius: 55px;
+  
 }
 .aboutminih2 {
   color: blueviolet;
@@ -171,3 +173,7 @@
     transition: all 1s;
     transform:  scale(1.1);
  }
+.down{
+  width: 25px;
+  height: 25px;
+}

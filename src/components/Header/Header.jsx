@@ -6,6 +6,7 @@ import aboutmini from "..//../img/imglogo/Alikmini.png";
 import gmail from "..//../img/imglogo/mail.png";
 import gps from "..//../img/imglogo/gps.png";
 import calendar from "..//../img/imglogo/calendar.png";
+import download from "..//../img/imglogo/file-download.png";
 import "./Header.css";
 function Header() {
   return (
@@ -38,7 +39,7 @@ function Header() {
               View My Work
             </button>
             <button className="Contact" id="#contact">
-              Contact Me
+            <a a href="tel:041459804"  >Contact Me</a>  
             </button>
           </div>
           <div className="findme">
@@ -81,11 +82,11 @@ function Header() {
             <div className="calendar1">
               <img src={calendar} alt="" className="calendar" />
               <p>06.12.1997</p>
-            <button className="downloadCV"> <a href="/Alik Hakobyan (4).pdf" download > Download CV  ⬇️</a></button>
+            <button className="downloadCV"> <a href="/Alik Hakobyan (4).pdf" download > Download CV   <img src={download} alt="" className="down" /> </a></button>
             </div>
             <div className="location1">
               <img src={gps} alt="" className="location" />
-              <p>Yerevan</p>
+              <p>Yerevan, Armenia</p>
             </div>
             <div className="mail1">
               <img src={gmail} alt="" className="mailmini" />
