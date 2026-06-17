@@ -27,6 +27,7 @@ function App() {
       <section id="projects">
         <Projects />
       </section>
+    
 
       <section id="experience">
         <Experience />

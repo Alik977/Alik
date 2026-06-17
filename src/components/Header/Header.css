@@ -3,9 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 .background {
   background-color: rgb(7, 7, 16);
-  height: 150vh;
+  height: 88vh;
   color: white;
 }
 
