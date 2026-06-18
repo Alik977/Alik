@@ -1,3 +1,9 @@
 html{
     scroll-behavior: smooth;
 }
+.totop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+}

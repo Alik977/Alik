@@ -8,7 +8,7 @@ html {
 }
 .projects{
     background-color: rgb(7, 7, 16);
-     height: 80vh;
+     height: 100vh;
      color: blueviolet;
      font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -35,4 +35,103 @@ html {
     display: flex;
    align-items: center;
     justify-content: space-between;
+}
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 0px;
+}
+
+.slider-track {
+  display: flex;
+  gap: 50px;
+  overflow: hidden;
+}
+
+.slide {
+  display: block;
+}
+
+.slide img {
+  width: 500px;
+  height: 280px;
+  border-radius: 35px;
+  object-fit: cover;
+
+}
+
+.slider-btn {
+  background: none;
+  border: 2px solid blueviolet;
+  color: blueviolet;
+  font-size: 2.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.slider-btn:hover {
+  background: rgba(138, 43, 226, 0.2);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #aaa;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: blueviolet;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background: #0f1016;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid blueviolet;
+}
+
+.modal-content video {
+  width: 1000px;
+  max-width: 90vw;
+  border-radius: 12px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: blueviolet;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
