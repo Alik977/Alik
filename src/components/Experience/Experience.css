@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.experienc {
+  background-color: rgb(7, 7, 16);
+  min-height: 100vh;
+  color: blueviolet;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.allexpreienc{
+      border-radius: 35px;
+  background-color: #0f1016;
+  width: 1380px;
+  height: 
+  300px;
+  padding: 20px 40px;
+  margin: auto;
+ 
+ 
+  gap: 20px;
+ border: 1px solid blueviolet;
+  position: relative;
+    z-index: 1;
+}
+
+.allexpreienc::before{
+   content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 35px;
+  background: linear-gradient(
+    60deg,
+    blueviolet,
+    rgb(149, 24, 233),
+    #ff00ff,
+    blueviolet
+  );
+  background-size: 400% 400%;
+  animation: borderMove 5s linear infinite;
+  z-index: -2;
+}
+.allexpreienc::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 33px;
+  background: #0f1016;
+  z-index: -1;
+}
+@keyframes borderMove {
+  0% {
+    background-position: 10% 10%;
+  }
+
+  10% {
+    background-position: 200% 150%;
+  }
+   50% {
+    background-position: 350% 50%;
+  }
+}
+.allexpreienc::before {
+  box-shadow:
+    0 0 10px blueviolet,
+    0 0 20px blueviolet,
+    0 0 40px blueviolet,
+    0 0 80px rgba(138, 43, 226, 0.7);
+}
+.part1 h3{
+color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.part1{
+    color: blueviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.expparagraph{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0px;
+}
+.part2{
+    width: 800px;
+}

@@ -25,7 +25,52 @@ html {
  
   gap: 20px;
  border: 1px solid blueviolet;
-  
+  position: relative;
+    z-index: 1;
+}
+
+.allskils::before{
+   content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 35px;
+  background: linear-gradient(
+    60deg,
+    blueviolet,
+    rgb(149, 24, 233),
+    #ff00ff,
+    blueviolet
+  );
+  background-size: 400% 400%;
+  animation: borderMove 5s linear infinite;
+  z-index: -2;
+}
+.allskils::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 33px;
+  background: #0f1016;
+  z-index: -1;
+}
+@keyframes borderMove {
+  0% {
+    background-position: 10% 10%;
+  }
+
+  10% {
+    background-position: 200% 150%;
+  }
+   50% {
+    background-position: 350% 50%;
+  }
+}
+.allskils::before {
+  box-shadow:
+    0 0 10px blueviolet,
+    0 0 20px blueviolet,
+    0 0 40px blueviolet,
+    0 0 80px rgba(138, 43, 226, 0.7);
 }
 .skill img{
   width: 70px;
