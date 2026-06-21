@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.contact {
+  background-color: rgb(7, 7, 16);
+  min-height: 80vh;
+  color: blueviolet;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0 20px; /* keeps card off the screen edges on mobile */
+}
+
+.allcontact {
+  border-radius: 35px;
+  background-color: #0f1016;
+  width: 100%;
+  max-width: 1380px; /* was fixed 1380px */
+  height: auto; /* was fixed 500px */
+  padding: 20px 40px;
+  margin: auto;
+
+  gap: 20px;
+  border: 1px solid blueviolet;
+  position: relative;
+  z-index: 1;
+}
+
+.allcontact::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 35px;
+  background: linear-gradient(
+    60deg,
+    blueviolet,
+    rgb(149, 24, 233),
+    #ff00ff,
+    blueviolet
+  );
+  background-size: 400% 400%;
+  animation: borderMove 5s linear infinite;
+  z-index: -2;
+}
+.allcontact::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 33px;
+  background: #0f1016;
+  z-index: -1;
+}
+@keyframes borderMove {
+  0% {
+    background-position: 10% 10%;
+  }
+
+  10% {
+    background-position: 200% 150%;
+  }
+  50% {
+    background-position: 350% 50%;
+  }
+  70% {
+    background-position: 350% 50%;
+  }
+  100% {
+    background-position: 350% 50%;
+  }
+}
+.allcontact::before {
+  box-shadow:
+    0 0 10px blueviolet,
+    0 0 20px blueviolet,
+    0 0 40px blueviolet,
+    0 0 80px rgba(138, 43, 226, 0.7);
+}
+.Cpart1 h3 {
+  color: rgb(192, 185, 185);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 600px;
+  max-width: 100%; /* was fixed 600px */
+}
+
+.contactpparagraph {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0px;
+}
+.Cpart1 img {
+  width: 50px;
+  height: 50px;
+}
+.Cpart2 img {
+  width: 50px;
+  height: 50px;
+}
+.downpart1 {
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.alldown {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* lets email/phone blocks stack on mobile */
+  gap: 20px;
+}
+.downpart2 {
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.cpart3 {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.Cpart2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 400px;
+  flex-wrap: wrap; /* the 400px gap forced overflow on small screens */
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1000px) {
+  .Cpart2 {
+    gap: 40px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .contact {
+    padding: 20px 10px;
+    min-height: auto;
+  }
+
+  .allcontact {
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .allcontact::before,
+  .allcontact::after {
+    border-radius: 20px;
+  }
+
+  .allcontact h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .Cpart1 h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .downpart1,
+  .downpart2,
+  .cpart3 {
+    gap: 15px;
+  }
+
+  .Cpart1 img,
+  .Cpart2 img {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+  }
+
+  .Cpart1 p,
+  .Cpart2 p {
+    font-size: 0.85rem;
+    word-break: break-word; /* long emails/links won't overflow */
+  }
+
+  .alldown {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .Cpart2 {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .Cpart1{
+    width: 400px;
+    text-align: center;
+  }
+}

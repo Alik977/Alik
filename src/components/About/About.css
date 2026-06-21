@@ -4,28 +4,29 @@
   box-sizing: border-box;
 }
 
-.allaboutme{
-    background-color: rgb(7, 7, 16);
-    height: 55vh;
+.allaboutme {
+  background-color: rgb(7, 7, 16);
+  height: 55vh;
 }
-.WhoI{
-color: white;
+.WhoI {
+  color: white;
 }
 
 .miniabout {
   border-radius: 35px;
   background-color: #0f1016;
-  width: 1380px;
-  padding: 20px 0px;
+  width: 100%;
+  max-width: 1380px; /* was fixed 1380px */
+  padding: 20px;
   margin: auto;
   display: flex;
   gap: 50px;
   border: 1px solid blueviolet;
   position: relative;
-    z-index: 1;
+  z-index: 1;
 }
-.miniabout::before{
-   content: "";
+.miniabout::before {
+  content: "";
   position: absolute;
   inset: -2px;
   border-radius: 35px;
@@ -56,7 +57,7 @@ color: white;
   10% {
     background-position: 200% 150%;
   }
-   50% {
+  50% {
     background-position: 350% 50%;
   }
 }
@@ -72,7 +73,7 @@ color: white;
   height: 350px;
   padding: 30px 0px 10px 30px;
   border-radius: 55px;
-  
+  flex-shrink: 0; /* keeps the photo from squishing on tablet */
 }
 .aboutminih2 {
   color: blueviolet;
@@ -82,6 +83,7 @@ color: white;
 .paragrapfmini {
   padding: 20px 0px;
   width: 500px;
+  max-width: 100%; /* was fixed 500px */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: gray;
 }
@@ -111,30 +113,104 @@ color: white;
   color: blueviolet;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 15px 0px;
+  word-break: break-word; /* long emails won't overflow on small screens */
 }
 .miniabout2 {
   display: flex;
   justify-content: space-between;
   gap: 150px;
+  flex-wrap: wrap; /* lets the 3 info blocks stack on mobile */
 }
 .downloadCV {
   background-color: transparent;
   color: blueviolet;
   padding: 20px 40px;
   border-radius: 25px;
-  border: 1px solid ;
+  border: 1px solid;
   font-size: 15px;
 }
 
-
- .downloadCV a{
-    color: blueviolet;
- }
- .downloadCV:hover{
-    transition: all 1s;
-    transform:  scale(1.1);
- }
-.down{
+.downloadCV a {
+  color: blueviolet;
+}
+.downloadCV:hover {
+  transition: all 1s;
+  transform: scale(1.1);
+}
+.down {
   width: 25px;
   height: 25px;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1000px) {
+  .miniabout {
+    flex-direction: column; /* image on top, text below */
+    align-items: center;
+    text-align: center;
+  }
+
+  .miniabout2 {
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .calendar1,
+  .location1,
+  .mail1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .allaboutme {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .miniabout {
+    border-radius: 20px;
+    padding: 20px 15px;
+    gap: 25px;
+  }
+
+  .miniabout::before,
+  .miniabout::after {
+    border-radius: 20px;
+  }
+
+  .aboutmini {
+    width: 180px;
+    height: 210px;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .aboutminih2 {
+    font-size: 1.1rem;
+  }
+
+  .WhoI {
+    font-size: 1.3rem;
+  }
+
+  .paragrapfmini {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  .miniabout2 {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .downloadCV {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
 }

@@ -11,12 +11,14 @@ html {
   min-height: 70vh;
   color: blueviolet;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0 20px; /* keeps the card off screen edges on mobile */
 }
 .allprojects {
   position: relative;
   border-radius: 35px;
-  width: 1380px;
-  height: 500px;
+  width: 100%;
+  max-width: 1380px; /* was fixed 1380px */
+  height: auto; /* was fixed 500px */
   margin: auto;
   padding: 20px 40px;
   background: #0f1016;
@@ -32,7 +34,7 @@ html {
   background: linear-gradient(
     45deg,
     blueviolet,
-   rgb(149, 24, 233),
+    rgb(149, 24, 233),
     #ff00ff,
     blueviolet
   );
@@ -99,6 +101,7 @@ html {
 .slide img {
   width: 500px;
   height: 280px;
+  max-width: 100%; /* lets the slide shrink on narrow screens */
   border-radius: 35px;
   object-fit: cover;
 }
@@ -154,6 +157,7 @@ html {
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  padding: 15px; /* breathing room on small screens */
 }
 
 .modal-content {
@@ -162,6 +166,7 @@ html {
   border-radius: 16px;
   padding: 20px;
   border: 1px solid blueviolet;
+  max-width: 100%;
 }
 
 .modal-content video {
@@ -179,4 +184,69 @@ html {
   color: blueviolet;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .slide img {
+    width: 380px;
+    height: 220px;
+  }
+
+  .slider-track {
+    gap: 25px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .projects {
+    padding: 0 10px;
+    min-height: auto;
+  }
+
+  .allprojects {
+    border-radius: 20px;
+    padding: 20px 15px;
+  }
+
+  .allprojects::before,
+  .allprojects::after {
+    border-radius: 20px;
+  }
+
+  .allprojects h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* Only one slide visible at a time on mobile keeps things from squashing */
+  .slider {
+    gap: 10px;
+    padding: 20px 0;
+  }
+
+  .slider-track {
+    gap: 15px;
+  }
+
+  .slide img {
+    width: 220px;
+    height: 160px;
+    border-radius: 20px;
+  }
+
+  .slider-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.8rem;
+  }
+
+  .modal-content {
+    padding: 12px;
+  }
+
+  .modal-content video {
+    width: 100%;
+  }
 }

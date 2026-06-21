@@ -6,7 +6,7 @@ import Skills from "./components/Skills/Skills.jsx";
 import Projects from "./components/Projects/Projects.jsx";
 import Experience from "./components/Experience/Experience.jsx";
 import Contact from "./components/Contact/Contact.jsx";
-import arrow from "./img/imgicon/up-arrow.png"
+import arrow from "./img/imgicon/up-arrow.png";
 function App() {
   return (
     <>
@@ -27,7 +27,6 @@ function App() {
       <section id="projects">
         <Projects />
       </section>
-    
 
       <section id="experience">
         <Experience />
@@ -36,9 +35,9 @@ function App() {
       <section id="contact">
         <Contact />
       </section>
-       <a href="#top"
-          ><img src={arrow}alt="" class="totop"
-        /></a>
+      <a href="#top">
+        <img src={arrow} alt="" className="totop" />
+      </a>
     </>
   );
 }

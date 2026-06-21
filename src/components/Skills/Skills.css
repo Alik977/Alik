@@ -6,31 +6,30 @@
 html {
   scroll-behavior: smooth;
 }
-.skils{
-     background-color: rgb(7, 7, 16);
-     height: 50vh;
-     color: blueviolet;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
+.skils {
+  background-color: rgb(7, 7, 16);
+  height: 50vh;
+  color: blueviolet;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.allskils{
-      border-radius: 35px;
+.allskils {
+  border-radius: 35px;
   background-color: #0f1016;
-  width: 1380px;
-  height: 
-  300px;
+  width: 100%;
+  max-width: 1380px; /* was fixed 1380px */
+  height: auto; /* was fixed 300px */
   padding: 20px 40px;
   margin: auto;
- 
- 
+
   gap: 20px;
- border: 1px solid blueviolet;
+  border: 1px solid blueviolet;
   position: relative;
-    z-index: 1;
+  z-index: 1;
 }
 
-.allskils::before{
-   content: "";
+.allskils::before {
+  content: "";
   position: absolute;
   inset: -2px;
   border-radius: 35px;
@@ -61,7 +60,7 @@ html {
   10% {
     background-position: 200% 150%;
   }
-   50% {
+  50% {
     background-position: 350% 50%;
   }
 }
@@ -72,10 +71,9 @@ html {
     0 0 40px blueviolet,
     0 0 80px rgba(138, 43, 226, 0.7);
 }
-.skill img{
+.skill img {
   width: 70px;
-height: 70px;
-
+  height: 70px;
 }
 .skill {
   width: 300px;
@@ -87,21 +85,76 @@ height: 70px;
   justify-content: center;
   align-items: center;
 }
-.skill:hover{
+.skill:hover {
   scale: 1.1;
   transition: all 1s;
   cursor: pointer;
 }
-.skill p{
-  color:blueviolet;
+.skill p {
+  color: blueviolet;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 25px;
   margin: auto;
 }
-.skilldown{
+.skilldown {
   display: flex;
   align-items: center;
-justify-content: center;
+  justify-content: center;
   padding: 30px 0px;
   gap: 25px;
+  flex-wrap: wrap; /* lets the 8 icon boxes wrap instead of overflowing */
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .skill {
+    width: 200px;
+    height: 100px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .skils {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .allskils {
+    border-radius: 20px;
+    padding: 20px 15px;
+  }
+
+  .allskils::before,
+  .allskils::after {
+    border-radius: 20px;
+  }
+
+  .allskils h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .skilldown {
+    gap: 12px;
+    padding: 20px 0;
+  }
+
+  .skill {
+    width: calc(50% - 6px); /* 2 per row on mobile */
+    height: 80px;
+    border-radius: 20px;
+  }
+
+  .skill img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 380px) {
+  .skill {
+    width: 100%; /* 1 per row on very small screens */
+  }
 }

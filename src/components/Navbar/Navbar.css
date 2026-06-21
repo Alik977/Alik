@@ -1,68 +1,151 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-li{
-    list-style: none;
-    text-decoration: none;
+li {
+  list-style: none;
+  text-decoration: none;
 }
-a{
-    text-decoration: none;
-    color: white;
-    padding: 10px;
+a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
 }
 
-li a:hover{color: blueviolet;
-   transition: all 2s;
-border-bottom: 5px solid blueviolet; 
-
+li a:hover {
+  color: blueviolet;
+  transition: all 2s;
+  border-bottom: 5px solid blueviolet;
 }
-    
 
 .navbar {
-     background-color: rgb(7, 7, 16);
- 
-   
- display: flex;
- justify-content: space-around;
-
-border-bottom: 1px solid gray;
-
-}
-.nav{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-.logoedit{
-width: 100px;
-height: 100px;
   background-color: rgb(7, 7, 16);
 
+  display: flex;
+  justify-content: space-around;
+
+  border-bottom: 1px solid gray;
 }
-.nav ul{
-    display: flex;
-    gap: 50px;
-    vertical-align: middle;
-    padding: 20px 200px;
-    font-size: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
-.link{
-    width: 50px;
-height: 50px;
-background-color: white;
-border-radius: 35px;
+.logoedit {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(7, 7, 16);
 }
-.git{
-    width: 50px;
-height: 50px;
-background-color: antiquewhite;
-border-radius: 35px;
+.nav ul {
+  display: flex;
+  gap: 50px;
+  vertical-align: middle;
+  padding: 20px 200px;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.link {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 35px;
+}
+.git {
+  width: 50px;
+  height: 50px;
+  background-color: antiquewhite;
+  border-radius: 35px;
 }
 
-.linkbio{
-    display: flex;
-    gap: 20px;
+.linkbio {
+  display: flex;
+  gap: 20px;
+}
+
+/* Hamburger icon - hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background-color: blueviolet;
+  border-radius: 2px;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .nav ul {
+    padding: 20px 60px;
+    gap: 25px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    position: relative;
+  }
+
+  .logoedit {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hamburger {
+    display: flex; /* show the toggle button */
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(7, 7, 16);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    border-bottom: 1px solid gray;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav.open {
+    max-height: 500px; /* reveals the menu when toggled open */
+  }
+
+  .nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 20px;
+    gap: 0;
+  }
+
+  .nav ul li {
+    width: 100%;
+    border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+  }
+
+  .nav ul li a {
+    display: block;
+    padding: 15px 10px;
+  }
+
+  .linkbio {
+    padding: 15px 20px 20px;
+    gap: 15px;
+  }
 }

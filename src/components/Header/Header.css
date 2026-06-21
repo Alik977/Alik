@@ -18,9 +18,12 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* lets text/photo stack on smaller screens */
+  gap: 40px;
 }
 .info1 {
   width: 700px;
+  max-width: 100%; /* was fixed 700px */
 }
 .Hello {
   color: blueviolet;
@@ -40,6 +43,8 @@ html {
 .imagealik {
   width: 800px;
   height: 800px;
+  max-width: 100%; /* was fixed 800x800, blew out the page on mobile */
+  height: auto;
 }
 .link1 {
   width: 50px;
@@ -59,6 +64,8 @@ html {
   align-items: center;
   justify-content: space-between;
   font-size: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 .findme {
   color: gray;
@@ -73,6 +80,7 @@ html {
   display: flex;
   gap: 40px;
   padding: 20px 0px;
+  flex-wrap: wrap;
 }
 
 .View {
@@ -102,7 +110,8 @@ html {
 .miniabout {
   border-radius: 35px;
   background-color: #0f1016;
-  width: 1380px;
+  width: 100%;
+  max-width: 1380px; /* was fixed 1380px */
   padding: 10px 0px;
   margin: auto;
   display: flex;
@@ -114,7 +123,6 @@ html {
   height: 350px;
   padding: 30px 0px 10px 30px;
   border-radius: 55px;
-  
 }
 .aboutminih2 {
   color: blueviolet;
@@ -124,6 +132,7 @@ html {
 .paragrapfmini {
   padding: 20px 0px;
   width: 500px;
+  max-width: 100%; /* was fixed 500px */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: gray;
 }
@@ -158,25 +167,103 @@ html {
   display: flex;
   justify-content: space-between;
   gap: 150px;
+  flex-wrap: wrap;
 }
 .downloadCV {
   background-color: transparent;
   color: blueviolet;
   padding: 20px 40px;
   border-radius: 25px;
-  border: 1px solid ;
+  border: 1px solid;
   font-size: 15px;
 }
 
-
- .downloadCV a{
-    color: blueviolet;
- }
- .downloadCV:hover{
-    transition: all 1s;
-    transform:  scale(1.1);
- }
-.down{
+.downloadCV a {
+  color: blueviolet;
+}
+.downloadCV:hover {
+  transition: all 1s;
+  transform: scale(1.1);
+}
+.down {
   width: 25px;
   height: 25px;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .infoall {
+    padding: 40px 50px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .imagealik {
+    width: 450px;
+    height: 450px;
+  }
+
+  .findme {
+    justify-content: center;
+  }
+
+  .button {
+    justify-content: center;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .background {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .infoall {
+    padding: 20px 20px;
+    flex-direction: column-reverse; /* photo first, then text on mobile */
+    text-align: center;
+  }
+
+  .Alik {
+    font-size: 2rem;
+  }
+
+  .front {
+    font-size: 1rem;
+  }
+
+  .aboutme {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  .imagealik {
+    width: 250px;
+    height: 250px;
+  }
+
+  .button {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .View,
+  .Contact {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .findme {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1rem;
+  }
+
+  .info2 {
+    display: flex;
+    gap: 20px;
+  }
 }

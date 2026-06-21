@@ -8,29 +8,28 @@ html {
 }
 .experienc {
   background-color: rgb(7, 7, 16);
-  min-height: 100vh;
+  min-height: 40vh;
   color: blueviolet;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0 20px; /* prevents the card from touching screen edges on mobile */
 }
 
-.allexpreienc{
-      border-radius: 35px;
+.allexpreienc {
+  border-radius: 35px;
   background-color: #0f1016;
-  width: 1380px;
-  height: 
-  300px;
+  width: 100%;
+  max-width: 1380px; /* was a fixed 1380px, now scales down */
+  height: auto; /* was fixed 300px, now grows with content */
   padding: 20px 40px;
   margin: auto;
- 
- 
   gap: 20px;
- border: 1px solid blueviolet;
+  border: 1px solid blueviolet;
   position: relative;
-    z-index: 1;
+  z-index: 1;
 }
 
-.allexpreienc::before{
-   content: "";
+.allexpreienc::before {
+  content: "";
   position: absolute;
   inset: -2px;
   border-radius: 35px;
@@ -61,7 +60,13 @@ html {
   10% {
     background-position: 200% 150%;
   }
-   50% {
+  50% {
+    background-position: 350% 50%;
+  }
+  70% {
+    background-position: 350% 50%;
+  }
+  100% {
     background-position: 350% 50%;
   }
 }
@@ -72,20 +77,86 @@ html {
     0 0 40px blueviolet,
     0 0 80px rgba(138, 43, 226, 0.7);
 }
-.part1 h3{
-color: white;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+.part1 h3 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.part1{
-    color: blueviolet;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.part1 {
+  color: blueviolet;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  flex-shrink: 0; /* keeps the title column from getting squeezed */
 }
-.expparagraph{
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px 0px;
+.expparagraph {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0px;
+  flex-wrap: wrap; /* lets part1/part2 stack on narrow screens */
 }
-.part2{
-    width: 800px;
+.part2 {
+  width: 800px;
+  max-width: 100%; /* was a hard 800px, now shrinks to fit */
+  flex: 1; /* fills remaining space on wide screens */
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 900px) {
+  .allexpreienc {
+    width: 100%;
+    padding: 20px 25px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .experienc {
+    padding: 20px 10px;
+    min-height: auto;
+  }
+
+  .allexpreienc {
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .allexpreienc::before,
+  .allexpreienc::after {
+    border-radius: 20px;
+  }
+
+  .allexpreienc h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .expparagraph {
+    flex-direction: column; /* part1 above part2 instead of side-by-side */
+    gap: 10px;
+    padding: 15px 0;
+  }
+
+  .part1 h3 {
+    font-size: 1.1rem;
+  }
+
+  .part2 {
+    width: 100%;
+  }
+
+  .part2 p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 380px) {
+  .allexpreienc {
+    padding: 15px;
+  }
+
+  .allexpreienc h1 {
+    font-size: 1.25rem;
+  }
 }
