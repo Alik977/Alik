@@ -8,7 +8,7 @@ html {
 }
 .contact {
   background-color: rgb(7, 7, 16);
-  min-height: 80vh;
+  min-height: 50vh;
   color: blueviolet;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 0 20px; /* keeps card off the screen edges on mobile */
@@ -192,7 +192,7 @@ html {
     gap: 20px;
   }
   .Cpart1{
-    width: 400px;
+    width: 350px;
     text-align: center;
   }
 }

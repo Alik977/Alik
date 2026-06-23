@@ -6,6 +6,7 @@ import Skills from "./components/Skills/Skills.jsx";
 import Projects from "./components/Projects/Projects.jsx";
 import Experience from "./components/Experience/Experience.jsx";
 import Contact from "./components/Contact/Contact.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 import arrow from "./img/imgicon/up-arrow.png";
 function App() {
   return (
@@ -38,8 +39,13 @@ function App() {
       <a href="#top">
         <img src={arrow} alt="" className="totop" />
       </a>
+   
+     
+   <Footer/>
     </>
+   
   );
+    
 }
 
 export default App;
