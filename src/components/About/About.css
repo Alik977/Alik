@@ -201,8 +201,12 @@
     font-size: 0.9rem;
     line-height: 1.5;
     text-align: justify;
+  
   }
-
+  .paragrapfmini {
+ width: auto;
+  
+  }
   .miniabout2 {
     flex-direction: column;
     gap: 20px;
