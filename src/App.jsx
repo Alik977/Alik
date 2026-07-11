@@ -8,9 +8,11 @@ import Experience from "./components/Experience/Experience.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import arrow from "./img/imgicon/up-arrow.png";
+import Preloader from "..//src/components/Preloder/Preloader.jsx";
 function App() {
   return (
     <>
+     <Preloader />
       <Navbar />
 
       <section id="home">
