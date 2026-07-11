@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
-import logo from "..//../img/imglogo/gemini-2.5-flash-image_Will_you_give_me_this_logo_Will_you_make_it_prettier_Keep_the_colors_the_same_ju-0 (1).jpg";
+import logo from "..//../img/imglogo/857146c7-5f6d-4fb4-a909-59adeece8659.png";
 import linkdin from "..//../img/imglogo/linkedin.png";
 import git from "..//../img/imglogo/github.png";
 
