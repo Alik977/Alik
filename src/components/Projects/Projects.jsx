@@ -6,7 +6,7 @@ import img4 from "../../img/imgprojects/4.png";
 import img5 from "../../img/imgprojects/5.png";
 import img6 from "../../img/imgprojects/6.png";
 import img7 from "../../img/imgprojects/7.png";
-
+import img8 from "../../img/imgprojects/8.png";
 import vid1 from "..//../img/video/1.mp4";
 import vid2 from "..//../img/video/3.mp4";
 import vid3 from "..//../img/video/5.mp4";
@@ -14,7 +14,7 @@ import vid4 from "..//../img/video/7.mp4";
 import vid5 from "..//../img/video/2.mp4";
 import vid6 from "..//../img/video/6.mp4";
 import vid7 from "..//../img/video/4.mp4";
-
+import vid8 from "..//../img/video/8.mp4";
 import "./Projects.css";
 
 const projects = [
@@ -25,6 +25,7 @@ const projects = [
   { img: img5, video: vid5 },
   { img: img6, video: vid6 },
   { img: img7, video: vid7 },
+  { img: img8, video: vid8 },
 ];
 
 function Projects() {
